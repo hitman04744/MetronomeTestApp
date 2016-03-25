@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bohdan.methronometest.MainActivity"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MANUAL MODE"
+        android:textSize="15sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:paddingBottom="23dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout"
+        android:weightSum="3"
+        android:background="@drawable/layout_bg"
+        android:elevation="5dp">
+
+
+        <LinearLayout
+            android:id="@+id/vibroButton"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/vibroImage"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_weight="80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/v" />
+
+            <TextView
+                android:id="@+id/vibroText"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:layout_weight="20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIBRATION" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/flashLightButton"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/flashImage"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_weight="80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/fi" />
+
+            <TextView
+                android:id="@+id/flashText"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_weight="20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FLASH" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/soundButton"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="100"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/soundImage"
+                android:paddingBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_weight="80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/s" />
+
+            <TextView
+                android:id="@+id/soundText"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_weight="20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOUND" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:paddingTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET BPM YOU NEED BELOW"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:paddingTop="10dp"
+        android:paddingBottom="23dp"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="100 bpm "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText">
+
+        <ImageView
+            android:paddingTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/layer_12" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:progressDrawable="@drawable/swipebg"
+            android:thumbOffset="0dp"
+            android:thumb="@drawable/thumb"
+            android:layout_centerHorizontal="true"
+            android:max="200"
+            android:progress="1"
+            android:minHeight="27dp"
+            android:maxHeight="27dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INDICATOR"
+        android:id="@+id/textView3"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/seek"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/ledImageView"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textColor="#ffffff"
+        android:elevation="15dp"
+        android:id="@+id/button"
+        android:background="@drawable/start_stop"
+        android:layout_below="@+id/ledImageView"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
